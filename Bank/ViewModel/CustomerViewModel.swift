@@ -10,9 +10,9 @@ import UIKit
 
 class CustomerViewModel{
     var customerAccountNumber: Int32?
+    var customerModel: CustomerManagedDataModel!
     func saveCustomer(accountNumber: String,name:String, dob:String, branch: String, balance: String, photo:UIImage, with completion:()->()){
-        let customerModel: CustomerManagedDataModel = CoreDataManager.sharedInstance.getManagedObject(for: CustomerEntityAtrributes.enityName.rawValue) as! CustomerManagedDataModel
-        
+         customerModel = CoreDataManager.sharedInstance.getManagedObject(for: CustomerEntityAtrributes.enityName.rawValue) as? CustomerManagedDataModel
         customerModel.customerId = customerAccountNumber ?? 0
         customerModel.name = name
         customerModel.balance = Int32(balance) ?? 0

@@ -15,7 +15,6 @@ class CustomerListViewModel{
 
     private func fetchCustomerFromPersistantStore(){
         CoreDataManager.sharedInstance.fetchConetext(entityName: CustomerEntityAtrributes.enityName.rawValue) {[weak self = self] (fetchedresultList: [Any])  in
-           
             for customer in fetchedresultList{
                 customerCellViewModel.append(CustomerCellViewModel(with: customer as! CustomerManagedDataModel))
             }
