@@ -26,7 +26,7 @@ class CustomerViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func onClickTransmit(sender: Any){
-        customerViewModel.saveCustomer(name: txtfldCustomerName.text ?? "", dob: txtfldDob.text ?? "", branch: txtfldBranch.text ?? "", balance: txtfldBalance.text ?? "", photo: imageCustomer.image!) {
+        customerViewModel.saveCustomer(accountNumber:String(customerAccountNumber ?? 0),name: txtfldCustomerName.text ?? "", dob: txtfldDob.text ?? "", branch: txtfldBranch.text ?? "", balance: txtfldBalance.text ?? "", photo: imageCustomer.image!) {
             navigationController?.popViewController(animated: true)
             }
         }

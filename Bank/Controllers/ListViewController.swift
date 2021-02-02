@@ -17,6 +17,12 @@ class ListViewController: UITableViewController{
             self?.tableView.reloadData()
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Create a new variable to store the instance of PlayerTableViewController
+        let destinationVC = segue.destination as! CustomerViewController
+        destinationVC.customerAccountNumber = Int32(String(BankConstant.defaultAccountNUmber.rawValue)+String(customerListViewModel.customerBind.value.count))
+    }
 }
 
 extension ListViewController{

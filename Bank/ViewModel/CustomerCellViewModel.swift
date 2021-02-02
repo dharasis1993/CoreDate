@@ -7,16 +7,7 @@
 
 import Foundation
 
-enum CustomerEntityAtrributes: String {
-    case enityName = "Customer"
-    case balance = "balance"
-    case branchCode = "branchCode"
-    case customerId = "customerId"
-    case dob = "dob"
-    case name = "name"
-    case photo = "photo"
-    case status = "status"
-}
+
 
 struct CustomerCellViewModel {
     private var customer: CustomerManagedDataModel
@@ -35,7 +26,7 @@ struct CustomerCellViewModel {
     }()
     
     lazy var customerId: String = {
-        let id: Int16 = customer.value(forKey: CustomerEntityAtrributes.customerId.rawValue) as! Int16
+        let id: Int32 = customer.value(forKey: CustomerEntityAtrributes.customerId.rawValue) as! Int32
         return String(id)
     }()
     

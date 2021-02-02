@@ -22,10 +22,10 @@
 		539F1D5B25C68CCE009BEB06 /* CustomerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539F1D5A25C68CCE009BEB06 /* CustomerViewController.swift */; };
 		539F1D5E25C6C22D009BEB06 /* DatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539F1D5D25C6C22D009BEB06 /* DatePicker.swift */; };
 		539F1D8125C703A2009BEB06 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539F1D8025C703A2009BEB06 /* CoreDataStack.swift */; };
-		539F1D8525C70DBD009BEB06 /* CustomerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539F1D8425C70DBD009BEB06 /* CustomerModel.swift */; };
 		539F1D8925C71271009BEB06 /* CustomerListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539F1D8825C71271009BEB06 /* CustomerListViewModel.swift */; };
 		539F1DB825C739E5009BEB06 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539F1DB725C739E5009BEB06 /* CoreDataManager.swift */; };
 		539F1DC125C743A1009BEB06 /* CustomerCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539F1DC025C743A1009BEB06 /* CustomerCellViewModel.swift */; };
+		53B2992825C90308001F293E /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B2992725C90308001F293E /* Constant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,10 +46,10 @@
 		539F1D5A25C68CCE009BEB06 /* CustomerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerViewController.swift; sourceTree = "<group>"; };
 		539F1D5D25C6C22D009BEB06 /* DatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePicker.swift; sourceTree = "<group>"; };
 		539F1D8025C703A2009BEB06 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
-		539F1D8425C70DBD009BEB06 /* CustomerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerModel.swift; sourceTree = "<group>"; };
 		539F1D8825C71271009BEB06 /* CustomerListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerListViewModel.swift; sourceTree = "<group>"; };
 		539F1DB725C739E5009BEB06 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		539F1DC025C743A1009BEB06 /* CustomerCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerCellViewModel.swift; sourceTree = "<group>"; };
+		53B2992725C90308001F293E /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				5340BAAB25C7AEE000004088 /* GenericObserver.swift */,
+				53B2992725C90308001F293E /* Constant.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -74,7 +75,6 @@
 		5371700F25C5B382003F76F4 = {
 			isa = PBXGroup;
 			children = (
-				536548B125C87B030051D8AA /* CustomerManagedDataModel+CoreDataClass.swift */,
 				5371701A25C5B382003F76F4 /* Bank */,
 				5371701925C5B382003F76F4 /* Products */,
 			);
@@ -138,6 +138,7 @@
 		539F1D6625C6DA63009BEB06 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				536548B125C87B030051D8AA /* CustomerManagedDataModel+CoreDataClass.swift */,
 				539F1D8025C703A2009BEB06 /* CoreDataStack.swift */,
 				539F1DB725C739E5009BEB06 /* CoreDataManager.swift */,
 			);
@@ -147,7 +148,6 @@
 		539F1D8325C70DAD009BEB06 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				539F1D8425C70DBD009BEB06 /* CustomerModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -235,6 +235,7 @@
 				536548AC25C847D30051D8AA /* CustomerViewModel.swift in Sources */,
 				5371702025C5B382003F76F4 /* ViewController.swift in Sources */,
 				5371702625C5B382003F76F4 /* Bank.xcdatamodeld in Sources */,
+				53B2992825C90308001F293E /* Constant.swift in Sources */,
 				5371701C25C5B382003F76F4 /* AppDelegate.swift in Sources */,
 				5371703A25C5F71C003F76F4 /* ListViewController.swift in Sources */,
 				5371703D25C5F7E0003F76F4 /* ListCustomCell.swift in Sources */,
@@ -246,7 +247,6 @@
 				539F1DC125C743A1009BEB06 /* CustomerCellViewModel.swift in Sources */,
 				539F1D5B25C68CCE009BEB06 /* CustomerViewController.swift in Sources */,
 				539F1D8925C71271009BEB06 /* CustomerListViewModel.swift in Sources */,
-				539F1D8525C70DBD009BEB06 /* CustomerModel.swift in Sources */,
 				539F1D5E25C6C22D009BEB06 /* DatePicker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
