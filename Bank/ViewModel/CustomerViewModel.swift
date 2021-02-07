@@ -19,7 +19,7 @@ class CustomerViewModel{
         customerModel.branchCode = Int16(branch) ?? 0
         customerModel.dob = getDateFromString(date: dob)
         customerModel.status = "open"
-        customerModel.photo = UIImage(named: "logo")?.pngData()
+        customerModel.photo = photo.pngData()
         CoreDataManager.sharedInstance.saveContext {
             completion()
         }

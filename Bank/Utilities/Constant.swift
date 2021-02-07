@@ -25,3 +25,7 @@ enum Identifier: String{
     case unwindIdentifier = "unwindIdentifier"
     case tableViewCellIdentifier = "listCellIdentifier"
 }
+
+enum Default: String{
+    case defaultPlaceholder = "avtar"
+}
