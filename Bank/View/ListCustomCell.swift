@@ -13,10 +13,10 @@ class ListCustomCell: UITableViewCell {
     @IBOutlet weak var lblAccountNumber: UILabel!
     @IBOutlet weak var lblBalance: UILabel!
     @IBOutlet weak var lblBranch: UILabel!
-    
-    var customerList: CustomerCellViewModel?{
-        didSet{
-            if var customerList = customerList{
+
+    var customerList: CustomerCellViewModel? {
+        didSet {
+            if var customerList = customerList {
                 lblCustomerName.text = customerList.customerName
                 lblAccountNumber.text = String(customerList.customerId)
                 lblBalance.text = String(customerList.customerBalance)
@@ -24,7 +24,7 @@ class ListCustomCell: UITableViewCell {
             }
         }
     }
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -6,24 +6,24 @@
 //
 
 import Foundation
-class GenericObserver<T>{
-    
-    typealias Observer = (T)->()
+class GenericObserver<T> {
+
+    typealias Observer = (T) -> Void
     var observer: Observer?
-    
-    var value: T{
-        didSet{
+
+    var value: T {
+        didSet {
             observer?(value)
         }
     }
-    
+
     init(_ data: T) {
         value = data
     }
-    
+
     func bind(_ closure: @escaping (T) -> Void) {
             observer = closure
             closure(value)
     }
-    
+
 }

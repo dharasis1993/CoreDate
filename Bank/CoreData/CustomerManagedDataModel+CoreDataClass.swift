@@ -9,7 +9,6 @@
 import Foundation
 import CoreData
 
-
 public class CustomerManagedDataModel: NSManagedObject {
     @NSManaged public var balance: Int32
     @NSManaged public var branchCode: Int16

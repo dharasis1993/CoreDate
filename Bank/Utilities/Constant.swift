@@ -17,15 +17,17 @@ enum CustomerEntityAtrributes: String {
     case status = "status"
 }
 
-enum BankConstant: Int32{
+enum BankConstant: Int32 {
     case defaultAccountNUmber = 11011011
 }
 
-enum Identifier: String{
+enum Identifier: String {
     case unwindIdentifier = "unwindIdentifier"
     case tableViewCellIdentifier = "listCellIdentifier"
 }
 
-enum Default: String{
+enum Default: String {
     case defaultPlaceholder = "avtar"
+    case deleteText = "delete"
+
 }

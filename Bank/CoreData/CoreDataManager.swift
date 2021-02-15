@@ -8,16 +8,16 @@
 import Foundation
 import CoreData
 
-class CoreDataManager{
-    
+class CoreDataManager {
+
     static let sharedInstance = CoreDataManager()
-    private init(){}
-    
-   func getManagedContext() -> NSManagedObjectContext{ CoreDataStack.persistentContainer.viewContext
+    private init() {}
+
+   func getManagedContext() -> NSManagedObjectContext { CoreDataStack.persistentContainer.viewContext
      }
-    
-    func getManagedObject(for entityName:String)->NSManagedObject{
-        
+
+    func getManagedObject(for entityName: String) -> NSManagedObject {
+
          let entity =
            NSEntityDescription.entity(forEntityName: entityName,
                                       in: getManagedContext())!
@@ -26,7 +26,7 @@ class CoreDataManager{
         return managedObject
      }
     // MARK: - Core Data Saving support
-    func saveContext (completion:()->()) {
+    func saveContext (completion:() -> Void) {
         let context = getManagedContext()
         if context.hasChanges {
             do {
@@ -40,17 +40,32 @@ class CoreDataManager{
             }
         }
     }
-    
-    func fetchConetext(entityName:String,fetchedresultList  completion:([NSManagedObject])->()){
+
+    func fetchConetext(entityName: String, fetchedresultList  completion: ([NSManagedObject]) -> Void) {
         let managedContext = getManagedContext()
         let fetchRequest =
           NSFetchRequest<NSManagedObject>(entityName: entityName)
         do {
-            let fetchedResult:[NSManagedObject] = try managedContext.fetch(fetchRequest)
+            let fetchedResult: [NSManagedObject] = try managedContext.fetch(fetchRequest)
             completion(fetchedResult)
         } catch let error as NSError {
           print("Could not fetch. \(error), \(error.userInfo)")
         }
     }
-    
+
+    func clearDatabase() {
+        // Create Fetch Request
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: CustomerEntityAtrributes.enityName.rawValue)
+
+        // Create Batch Delete Request
+        let batchDeleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+
+        do {
+            try getManagedContext().execute(batchDeleteRequest)
+
+        } catch {
+            // Error Handling
+        }
+    }
+
 }

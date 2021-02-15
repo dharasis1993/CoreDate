@@ -7,15 +7,15 @@
 
 import Foundation
 
-class CustomerListViewModel{
+class CustomerListViewModel {
     var customerCellViewModel = [CustomerCellViewModel]()
     var customerBind: GenericObserver<[CustomerCellViewModel]> = GenericObserver([])
 
     init() { fetchCustomerFromPersistantStore() }
 
-    private func fetchCustomerFromPersistantStore(){
+    private func fetchCustomerFromPersistantStore() {
         CoreDataManager.sharedInstance.fetchConetext(entityName: CustomerEntityAtrributes.enityName.rawValue) {[weak self = self] (fetchedresultList: [Any])  in
-            for customer in fetchedresultList{
+            for customer in fetchedresultList {
                 customerCellViewModel.append(CustomerCellViewModel(with: customer as! CustomerManagedDataModel))
             }
 
